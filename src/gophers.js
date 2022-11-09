@@ -24,7 +24,10 @@ const create = async (data) => {
 const load = async (id) => {
   const command = new GetItemCommand({
     TableName: process.env.TABLE_NAME,
-    Key: marshall({ id })
+    Key: marshall({
+      pk: id,
+      sk: 'gopher'
+    })
   });
 
   const result = await ddb.send(command);
