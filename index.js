@@ -3,7 +3,7 @@ import { Gopher } from './src/gophers.js';
 
 const app = express();
 
-app.listen(3000, () => { console.log('listening on port 3000') });
+app.listen(8000, () => { console.log('listening on port 8000') });
 
 app.post('/gophers', async (req, res) => {
   try {
